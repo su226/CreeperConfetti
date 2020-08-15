@@ -1,0 +1,7 @@
+{
+	"confetti": {
+    "category": "hostile",
+    "sounds": ["creeperconfetti:confetti"],
+    "subtitle": "creeperconfetti.subtitle.confetti"
+  }
+}

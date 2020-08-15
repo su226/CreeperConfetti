@@ -1,0 +1,12 @@
+{
+  "creeperconfetti.subtitle.confetti": "Confetti Sounds",
+
+  "title.creeperconfetti.config": "Creeper Confetti Config",
+  "category.creeperconfetti.general": "General",
+  "option.creeperconfetti.chance": "Confetti Chance",
+  "option.creeperconfetti.chance.description": "Chance for a creeper to explode into confetti. (0 ~ 1, default: 0.1)",
+  "option.creeperconfetti.damage": "Damage Ratio",
+  "option.creeperconfetti.damage.description": "Ratio of damage if a creeper will explode into confetti. (0 ~ 1, default: 0)",
+  "option.creeperconfetti.soundChance": "Sound Chance",
+  "option.creeperconfetti.soundChance.description": "Chance to play sound effect if a creeper will explode into confetti. (0 ~ 1, default: 0.05)"
+}

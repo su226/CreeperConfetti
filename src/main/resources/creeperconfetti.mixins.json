@@ -1,13 +1,13 @@
 {
   "required": true,
   "minVersion": "0.8",
-  "package": "net.fabricmc.example.mixin",
+  "package": "su226.creeperconfetti.mixin",
   "compatibilityLevel": "JAVA_8",
   "mixins": [
+    "CreeperEntityMixin"
   ],
-  "client": [
-    "ExampleMixin"
-  ],
+  "client": [],
+  "server": [],
   "injectors": {
     "defaultRequire": 1
   }

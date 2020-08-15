@@ -1,9 +1,14 @@
-# Fabric Example Mod
+# Creeper Confetti (Fabric port)
+[CurseForge](https://www.curseforge.com/minecraft/mc-mods/creeper-confetti-fabric)
 
-## Setup
+A simple Minecraft mod replaces the Creeper explosion with nice and harmless confetti.
 
-For setup instructions please see the [fabric wiki page](https://fabricmc.net/wiki/tutorial:setup) that relates to the IDE that you are using.
+[Original mod by SR2610](https://github.com/SR2610/MicroMods/tree/master/CreeperConfetti). Ported to Fabric by su226.
 
-## License
+There are 2 config options available:
 
-This template is available under the CC0 license. Feel free to learn from it and incorporate it in your own projects.
+- Chance for a creeper to explode into confetti.
+- Ratio of damage if a creeper will explode into confetti.
+- Chance to play sound effect if a creeper will explode into confetti.
+
+Code licensed with MIT, feel free to use in modpacks.

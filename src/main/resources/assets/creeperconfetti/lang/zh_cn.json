@@ -1,0 +1,12 @@
+{
+  "creeperconfetti.subtitle.confetti": "礼花声",
+
+  "title.creeperconfetti.config": "Creeper Confetti 设置",
+  "category.creeperconfetti.general": "基本设置",
+  "option.creeperconfetti.chance": "纸屑几率",
+  "option.creeperconfetti.chance.description": "苦力怕爆炸成纸屑的几率. (0 ~ 1, 默认: 0.1)",
+  "option.creeperconfetti.damage": "伤害系数",
+  "option.creeperconfetti.damage.description": "如果苦力怕会爆炸成纸屑，伤害保留的系数. (0 ~ 1, 默认: 0)",
+  "option.creeperconfetti.soundChance": "声音几率",
+  "option.creeperconfetti.soundChance.description": "如果苦力怕会爆炸成纸屑，播放声音的几率. (0 ~ 1, 默认: 0.05)"
+}

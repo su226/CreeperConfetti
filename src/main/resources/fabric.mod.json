@@ -1,37 +1,46 @@
 {
   "schemaVersion": 1,
-  "id": "modid",
+  "id": "creeperconfetti",
   "version": "${version}",
 
-  "name": "Example Mod",
-  "description": "This is an example description! Tell everyone what your mod is about!",
+  "name": "Creeper Confetti",
+  "description": "Replaces the Creeper explosion with nice and harmless confetti. (Ported to Fabric by su226)",
   "authors": [
-    "Me!"
+    "SR2610",
+    "su226"
   ],
   "contact": {
-    "homepage": "https://fabricmc.net/",
-    "sources": "https://github.com/FabricMC/fabric-example-mod"
+    "homepage": "https://www.curseforge.com/minecraft/mc-mods/creeper-confetti-fabric",
+    "sources": "https://github.com/su226/CreeperConfetti",
+    "issues": "https://github.com/su226/CreeperConfetti/issues"
   },
 
-  "license": "CC0-1.0",
-  "icon": "assets/modid/icon.png",
+  "license": "GPL-3.0",
+  "icon": "assets/creeperconfetti/icon.png",
 
   "environment": "*",
   "entrypoints": {
     "main": [
-      "net.fabricmc.example.ExampleMod"
+      "su226.creeperconfetti.Mod"
+    ],
+    "client": [
+      "su226.creeperconfetti.ModClient"
+    ],
+    "modmenu": [
+      "su226.creeperconfetti.ConfigMenu"
     ]
   },
   "mixins": [
-    "modid.mixins.json"
+    "creeperconfetti.mixins.json"
   ],
 
   "depends": {
-    "fabricloader": ">=0.7.4",
+    "fabricloader": "*",
     "fabric": "*",
     "minecraft": "1.16.x"
   },
   "suggests": {
-    "flamingo": "*"
+    "modmenu": "*",
+    "cloth-config2": "*"
   }
 }
