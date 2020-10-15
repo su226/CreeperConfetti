@@ -14,7 +14,7 @@ public class Config {
   public static float damage = 0f;
   public static float soundChance = .05f;
 
-  static final Path configPath = FabricLoader.getInstance().getConfigDir().resolve("creeperconfetti.properities");
+  static final Path configPath = FabricLoader.getInstance().getConfigDir().resolve("creeperconfetti.properties");
 
   static float parseRangedFloat(String s, float min, float max, float def) {
     if (s == null) {
