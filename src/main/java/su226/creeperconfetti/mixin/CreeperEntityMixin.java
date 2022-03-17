@@ -1,8 +1,8 @@
 package su226.creeperconfetti.mixin;
 
 import net.minecraft.entity.mob.CreeperEntity;
-import net.minecraft.nbt.NbtCompound;
-import net.minecraft.nbt.NbtList;
+import net.minecraft.nbt.CompoundTag;
+import net.minecraft.nbt.ListTag;
 import net.minecraft.sound.SoundCategory;
 import net.minecraft.sound.SoundEvents;
 import net.minecraft.util.math.Vec3d;
@@ -27,8 +27,7 @@ public abstract class CreeperEntityMixin {
   @Inject(at = @At("INVOKE"), method = "tick()V")
   void tick(CallbackInfo info) {
     CreeperEntity that = (CreeperEntity)(Object)this;
-    int fuseTime = this.fuseTime - (that.world.isClient ? 2 : 1);
-    if (!that.isAlive() || this.currentFuseTime < fuseTime) {
+    if (!that.isAlive() || this.currentFuseTime < this.fuseTime - 1) {
       return;
     }
     Random rand = new Random(that.getUuid().getMostSignificantBits());
@@ -48,12 +47,12 @@ public abstract class CreeperEntityMixin {
         if (Config.damage != 0) {
           that.world.createExplosion(that, pos.x, pos.y, pos.z, Config.damage * (charged ? 2f : 1f) * this.explosionRadius, DestructionType.NONE);
         }
-        that.discard();
+        that.remove();
       }
     }
   }
 
-  NbtCompound generateTag(byte type) {
+  CompoundTag generateTag(byte type) {
     Random rand = new Random();
     int[] list = new int[rand.nextInt(3) + 6];
     list[0] = 0xE67E22;
@@ -62,13 +61,13 @@ public abstract class CreeperEntityMixin {
     for (int i = 3; i < list.length; i++) {
       list[i] = rand.nextInt(0x1000000);
     }
-    NbtCompound fireworkTag = new NbtCompound();
+    CompoundTag fireworkTag = new CompoundTag();
     fireworkTag.putIntArray("Colors", list);
     fireworkTag.putBoolean("Flicker", true);
     fireworkTag.putByte("Type", type);
-    NbtList nbttaglist = new NbtList();
+    ListTag nbttaglist = new ListTag();
     nbttaglist.add(fireworkTag);
-    NbtCompound fireworkItemTag = new NbtCompound();
+    CompoundTag fireworkItemTag = new CompoundTag();
     fireworkItemTag.put("Explosions", nbttaglist);
     return fireworkItemTag;
   }
