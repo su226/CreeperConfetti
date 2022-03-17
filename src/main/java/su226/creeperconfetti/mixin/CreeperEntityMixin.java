@@ -33,7 +33,7 @@ public abstract class CreeperEntityMixin {
     Random rand = new Random(that.getUuid().getMostSignificantBits());
     if (rand.nextDouble() < Config.chance) {
       Vec3d pos = that.getPos();
-      boolean charged = that.shouldRenderOverlay();
+      boolean charged = that.isCharged();
       if (that.world.isClient) {
         if (rand.nextDouble() < Config.soundChance) {
           that.world.playSound(pos.x, pos.y, pos.z, ModClient.confetti, SoundCategory.HOSTILE, 2F, 1F, false);
